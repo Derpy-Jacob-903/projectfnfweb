@@ -48,7 +48,8 @@ build_script:
   - cd /home/appveyor/src/source/ugh
   - mv APIStuff.hx /home/appveyor/src/source
   - cd /home/appveyor/site
-  - rmdir /home/appveyor/src/source/ugh
+  - ls /home/appveyor/src/source/ugh
+  - rm /home/appveyor/src/source/ugh
   - git config --global credential.helper store
   - printf "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com\n" > $HOME/.git-credentials
   - git config --global user.email "mycatisagoodboi@gmail.com"
