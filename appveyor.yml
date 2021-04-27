@@ -47,8 +47,8 @@ build_script:
   - git clone https://github.com/Derpy-Jacob-903/APIStuff.git /home/appveyor/src/source/ugh
   - cd /home/appveyor/src/source/ugh
   - mv APIStuff.hx /home/appveyor/src/source
-  - rmdir
   - cd /home/appveyor/site
+  - rmdir /home/appveyor/src/source/ugh
   - git config --global credential.helper store
   - printf "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com\n" > $HOME/.git-credentials
   - git config --global user.email "mycatisagoodboi@gmail.com"
