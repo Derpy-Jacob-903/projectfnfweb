@@ -28,6 +28,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - run: cd /home
+      - run: mkdir appveyor/site
       - run: cd /home/appveyor/site
       - run: git checkout main
       - run: cd /home/appveyor
