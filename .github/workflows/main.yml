@@ -4,9 +4,17 @@ name: CI
 
 # Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  schedule:
-    - cron:  '30 5 * * *'
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      name:
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'Person to greet'
+        # Default value if no value is explicitly provided
+        default: 'World'
+        # Input has to be provided for the workflow to run
+        required: true
+
 env:
   HAXELIB_ROOT: /home/appveyor/haxelib
   HAXE_INSTALLDIR: /home/appveyor/haxe
