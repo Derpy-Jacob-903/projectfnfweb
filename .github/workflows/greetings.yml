@@ -20,3 +20,10 @@ jobs:
   true:
      runs-on: ubuntu-latest
      if: no ${{commits[after][message]='nightly build through appveyor'}}
+     steps:
+         run: |
+          cat beans.txt
+          git bean.txt
+         run: |
+          cat beans.txt
+          git bean.txt
