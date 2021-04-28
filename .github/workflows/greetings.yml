@@ -1,0 +1,22 @@
+name: Greetings
+
+on: push
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    
+      - shell: bash
+      - run: touch > cat.txt
+      - run: cat cat.txt
+      - if: no ${{commits[after][message]='nightly build through appveyor'}}
+        run: |
+         git add cat.txt
+         git commit
+  true:
+     runs-on: ubuntu-latest
+     if: no ${{commits[after][message]='nightly build through appveyor'}}
