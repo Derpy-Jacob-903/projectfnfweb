@@ -10,6 +10,7 @@ environment:
   HAXELIB_ROOT: /home/appveyor/haxelib
   HAXE_INSTALLDIR: /home/appveyor/haxe
   SRC_REPO: https://github.com/aflacc/ProjectFNF.git
+  UGH_REPO: https://github.com/Derpy-Jacob-903/ProjectFNF.git
   GITHUB_ACCESS_TOKEN:
     secure: AYoRbFDfZVEdfVVzZFuz5wJXJkAEOOkHtgAweikYp3tqImQUhwg2P6dCjyPxEF7o
 
@@ -40,6 +41,8 @@ install:
   - haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
   - haxelib list
   - git clone $SRC_REPO /home/appveyor/src
+  - mkdir /home/appveyor/ugh
+  - git clone $SRC_REPO /home/appveyor/ugh
 
 build_script:
   - cd /home/appveyor/src/source
@@ -59,6 +62,26 @@ build_script:
   - git rm -rf nightly/
   - cp -r /home/appveyor/src/export/release/html5/bin /home/appveyor/site/bin
   - mv /home/appveyor/site/bin /home/appveyor/site/nightly
+  - git add --all
+  - git commit -m "nightly build through appveyor"
+  - git push
+  - cd /home/appveyor/ugh/source
+  - mkdir /home/appveyor/ugh/source/ugh
+  - git clone https://github.com/Derpy-Jacob-903/APIStuff.git /home/appveyor/ugh/source/ugh
+  - cd /home/appveyor/ugh/source/ugh
+  - mv APIStuff.hx /home/appveyor/ugh/source
+  - cd /home/appveyor/site
+  - ls /home/appveyor/ugh/source/ugh
+  - git config --global credential.helper store
+  - printf "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com\n" > $HOME/.git-credentials
+  - git config --global user.email "mycatisagoodboi@gmail.com"
+  - git config --global user.name "Derpy-Jacob-903"
+  - cd /home/appveyor/ugh
+  - haxelib run lime build html5
+  - cd /home/appveyor/site
+  - git rm -rf nightly/
+  - cp -r /home/appveyor/ugh/export/release/html5/bin /home/appveyor/site/bin
+  - mv /home/appveyor/site/bin /home/appveyor/site/ugh
   - git add --all
   - git commit -m "nightly build through appveyor"
   - git push
