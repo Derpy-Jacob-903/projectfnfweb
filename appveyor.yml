@@ -43,9 +43,9 @@ install:
   - haxelib list
   - git clone $SRC_REPO /home/appveyor/src
   - mkdir /home/appveyor/ugh
-  - git clone $SRC_REPO /home/appveyor/ugh
+  - git clone $UGH_REPO /home/appveyor/ugh
   - mkdir /home/appveyor/chp
-  - git clone $SRC_REPO /home/appveyor/chp
+  - git clone $CHP_REPO /home/appveyor/chp
 
 build_script:
   - cd /home/appveyor/src/source
