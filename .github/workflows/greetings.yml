@@ -9,8 +9,6 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-    
-      - shell: bash
       - if: ${{ commits[after][message] != 'nightly build through appveyor' }}
       - uses: actions/first-interaction@v1
         with:
