@@ -68,13 +68,10 @@ build_script:
   - git add --all
   - git commit -m "nightly build through appveyor"
   - git push
-  - cd /home/appveyor/ugh/source
-  - mkdir /home/appveyor/ugh/source/ugh
-  - git clone https://github.com/Derpy-Jacob-903/APIStuff.git /home/appveyor/ugh/source/ugh
-  - cd /home/appveyor/ugh/source/ugh
+  - cd /home/appveyor/src/source/ugh
   - mv APIStuff.hx /home/appveyor/ugh/source
   - cd /home/appveyor/site
-  - ls /home/appveyor/ugh/source/ugh
+  - ls /home/appveyor/src/source/ugh
   - git config --global credential.helper store
   - printf "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com\n" > $HOME/.git-credentials
   - git config --global user.email "mycatisagoodboi@gmail.com"
@@ -89,12 +86,10 @@ build_script:
   - git commit -m "nightly build through appveyor"
   - git push
   - cd /home/appveyor/chp/source
-  - mkdir /home/appveyor/chp/source/ugh
-  - git clone https://github.com/Derpy-Jacob-903/APIStuff.git /home/appveyor/chp/source/ugh
-  - cd /home/appveyor/chp/source/ugh
+  - cd /home/appveyor/src/source/ugh
   - mv APIStuff.hx /home/appveyor/chp/source
   - cd /home/appveyor/site
-  - ls /home/appveyor/chp/source/ugh
+  - ls /home/appveyor/src/source/ugh
   - git config --global credential.helper store
   - printf "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com\n" > $HOME/.git-credentials
   - git config --global user.email "mycatisagoodboi@gmail.com"
