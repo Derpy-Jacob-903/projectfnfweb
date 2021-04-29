@@ -12,7 +12,9 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-        - uses: actions/first-interaction@v1
+        - name: Webhook
+          uses: joelwmale/webhook-action@master
           with:
-              repo-token: ${{ secrets.GITHUB_TOKEN }}
-              issue-message: 'Message that will be displayed on users first issue'
+                url: ${{ secrets.WEBHOOK_URL }}
+                headers: '{"repository": "joelwmale/webhook-action"}'
+                body: '{"event": "deployment", "repository": "joelwmale/webhook-action"}'
