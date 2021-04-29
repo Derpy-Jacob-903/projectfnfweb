@@ -11,6 +11,7 @@ environment:
   HAXE_INSTALLDIR: /home/appveyor/haxe
   SRC_REPO: https://github.com/aflacc/ProjectFNF.git
   UGH_REPO: https://github.com/Derpy-Jacob-903/ProjectFNF.git
+  CHP_REPO: https://github.com/chp656s/ProjectFNF.git
   GITHUB_ACCESS_TOKEN:
     secure: AYoRbFDfZVEdfVVzZFuz5wJXJkAEOOkHtgAweikYp3tqImQUhwg2P6dCjyPxEF7o
 
@@ -43,6 +44,8 @@ install:
   - git clone $SRC_REPO /home/appveyor/src
   - mkdir /home/appveyor/ugh
   - git clone $SRC_REPO /home/appveyor/ugh
+  - mkdir /home/appveyor/chp
+  - git clone $SRC_REPO /home/appveyor/chp
 
 build_script:
   - cd /home/appveyor/src/source
