@@ -90,9 +90,6 @@ build_script:
   - cd /home/appveyor/chp
   - haxelib run lime build html5
   - cd /home/appveyor/site
-  - git rm -rf nightly/
-  - git rm -rf ugh/
-  - git rm -rf chp/
   - cp -r /home/appveyor/chp/export/release/html5/bin /home/appveyor/site/bin
   - mv /home/appveyor/site/bin /home/appveyor/site/chp
   - git add --all
