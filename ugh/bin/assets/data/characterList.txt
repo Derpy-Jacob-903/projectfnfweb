@@ -1,0 +1,17 @@
+bf
+bf-pixel
+bf-christmas
+bf-car
+gf
+gf-christmas
+dad
+mom
+mom-car
+parents-christmas
+spooky
+pico
+monster
+monster-christmas
+senpai
+senpai-angry
+spirit
