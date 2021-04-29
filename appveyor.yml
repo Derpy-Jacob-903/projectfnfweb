@@ -52,7 +52,7 @@ build_script:
   - mkdir /home/appveyor/src/source/ugh
   - git clone https://github.com/Derpy-Jacob-903/APIStuff.git /home/appveyor/src/source/ugh
   - cd /home/appveyor/src/source/ugh
-  - mv APIStuff.hx /home/appveyor/src/source
+  - cp APIStuff.hx /home/appveyor/src/source
   - cd /home/appveyor/site
   - ls /home/appveyor/src/source/ugh
   - git config --global credential.helper store
@@ -66,7 +66,7 @@ build_script:
   - cp -r /home/appveyor/src/export/release/html5/bin /home/appveyor/site/bin
   - mv /home/appveyor/site/bin /home/appveyor/site/nightly
   - cd /home/appveyor/src/source/ugh
-  - mv APIStuff.hx /home/appveyor/ugh/source
+  - cp APIStuff.hx /home/appveyor/ugh/source
   - cd /home/appveyor/site
   - ls /home/appveyor/src/source/ugh
   - git config --global credential.helper store
