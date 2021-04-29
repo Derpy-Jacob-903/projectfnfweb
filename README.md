@@ -3,4 +3,4 @@
 [![Updated](https://img.shields.io/github/last-commit/aflacc/ProjectFNF?label=Updated&style=flat)](https://github.com/aflacc/ProjectFNF/commits/master)
 [![Activity](https://img.shields.io/github/commit-activity/w/aflacc/ProjectFNF?label=Activity&style=flat)]
 [![Issues](https://img.shields.io/github/issues/aflacc/ProjectFNF?style=flat)](https://github.com/aflacc/ProjectFNF/issues)
-![License](https://img.shields.io/github/license/aflacc/ProjectFNF?style=flat)
+![License](https://img.shields.io/github/license/aflacc/ProjectFNF?style=flat?color=informational)
