@@ -3,6 +3,6 @@
 This site hosts HTML5 builds of [ProjectFNF](https://github.com/aflacc/ProjectFNF), compiled...
 ![Appveyor](https://ci.appveyor.com/api/projects/status/8r85os49bck3f257?svg=true)
 
-# [Play](nightly/) | [View README](https://github.com/aflacc/ProjectFNF/blob/master/README.md)
-# [Play](ugh/) | [View README](https://github.com/Derpy-Jacob-903/ProjectFNF/blob/master/README.md)
-# [Play](chp/) | [View README](https://github.com/chp656s/ProjectFNF/blob/master/README.md)
+# [Play](nightly/) | [View README](https://github.com/aflacc/ProjectFNF/blob/master/README.md) v0.2-a
+# [Play](ugh/) | [View README](https://github.com/Derpy-Jacob-903/ProjectFNF/blob/master/README.md) v0.2-a
+# [Play](chp/) | [View README](https://github.com/chp656s/ProjectFNF/blob/master/README.md) v0.1-c
