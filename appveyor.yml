@@ -2,6 +2,7 @@ version: 'v0.2-{build}-web3'
 branches:
   only:
   - main
+  - PPA
 skip_tags: true
 image: Ubuntu2004
 clone_folder: /home/appveyor/site
