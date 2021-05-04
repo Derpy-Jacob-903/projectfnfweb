@@ -4,3 +4,4 @@
 [![Activity](https://img.shields.io/github/commit-activity/w/aflacc/ProjectFNF?label=Activity&style=flat)]
 [![Issues](https://img.shields.io/github/issues/aflacc/ProjectFNF?style=flat)](https://github.com/aflacc/ProjectFNF/issues)
 ![License](https://img.shields.io/github/license/aflacc/ProjectFNF?color=blue?style=flat)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a764c62fa3d388673d20/maintainability)](https://codeclimate.com/github/Derpy-Jacob-903/projectfnfweb/maintainability)
