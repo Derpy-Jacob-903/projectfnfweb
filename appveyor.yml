@@ -10,7 +10,7 @@ environment:
   HAXELIB_ROOT: /home/appveyor/haxelib
   HAXE_INSTALLDIR: /home/appveyor/haxe
   SRC_REPO: https://github.com/aflacc/ProjectFNF.git
-  UGH_REPO: https://github.com/Derpy-Jacob-903/ProjectFNF.git
+  DERPY_REPO: https://github.com/Derpy-Jacob-903/ProjectFNF.git
   CHP_REPO: https://github.com/chp656s/ProjectFNF.git
   GITHUB_ACCESS_TOKEN:
     secure: AYoRbFDfZVEdfVVzZFuz5wJXJkAEOOkHtgAweikYp3tqImQUhwg2P6dCjyPxEF7o
@@ -44,7 +44,7 @@ install:
   - haxelib list
   - git clone $SRC_REPO /home/appveyor/src
   - mkdir /home/appveyor/ugh
-  - git clone $UGH_REPO /home/appveyor/ugh
+  - git clone $DERPY_REPO /home/appveyor/derpy
   - mkdir /home/appveyor/chp
   - git clone $CHP_REPO /home/appveyor/chp
 
@@ -64,21 +64,23 @@ build_script:
   - haxelib run lime build html5
   - cd /home/appveyor/site
   - git rm -rf nightly/
+  - rm /home/appveyor/site/bin
+  - mkdir /home/appveyor/site/bin
   - cp -r /home/appveyor/src/export/release/html5/bin /home/appveyor/site/bin
   - mv /home/appveyor/site/bin /home/appveyor/site/nightly
   - cd /home/appveyor/src/source/ugh
-  - cp APIStuff.hx /home/appveyor/ugh/source
+  - cp APIStuff.hx /home/appveyor/derpy/source
   - cd /home/appveyor/site
   - ls /home/appveyor/src/source/ugh
   - git config --global credential.helper store
   - printf "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com\n" > $HOME/.git-credentials
   - git config --global user.email "mycatisagoodboi@gmail.com"
   - git config --global user.name "Derpy-Jacob-903"
-  - cd /home/appveyor/ugh
+  - cd /home/appveyor/derpy
   - haxelib run lime build html5
   - cd /home/appveyor/site
-  - cp -r /home/appveyor/ugh/export/release/html5/bin /home/appveyor/site/bin
-  - mv /home/appveyor/site/bin /home/appveyor/site/ugh
+  - cp -r /home/appveyor/derpy/export/release/html5/bin /home/appveyor/site/bin
+  - mv /home/appveyor/site/bin /home/appveyor/site/derpy
   - cd /home/appveyor/chp/source
   - cd /home/appveyor/src/source/ugh
   - mv APIStuff.hx /home/appveyor/chp/source
@@ -91,6 +93,8 @@ build_script:
   - cd /home/appveyor/chp
   - haxelib run lime build html5
   - cd /home/appveyor/site
+  - rm /home/appveyor/site/bin
+  - mkdir /home/appveyor/site/bin
   - cp -r /home/appveyor/chp/export/release/html5/bin /home/appveyor/site/bin
   - mv /home/appveyor/site/bin /home/appveyor/site/chp
   - git add --all
