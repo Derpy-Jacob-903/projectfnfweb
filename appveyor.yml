@@ -64,8 +64,6 @@ build_script:
   - haxelib run lime build html5
   - cd /home/appveyor/site
   - git rm -rf nightly/
-  - rm /home/appveyor/site/bin
-  - mkdir /home/appveyor/site/bin
   - cp -r /home/appveyor/src/export/release/html5/bin /home/appveyor/site/bin
   - mv /home/appveyor/site/bin /home/appveyor/site/nightly
   - cd /home/appveyor/src/source/ugh
@@ -78,6 +76,8 @@ build_script:
   - git config --global user.name "Derpy-Jacob-903"
   - cd /home/appveyor/derpy
   - haxelib run lime build html5
+  - rm /home/appveyor/site/bin
+  - mkdir /home/appveyor/site/bin
   - cd /home/appveyor/site
   - cp -r /home/appveyor/derpy/export/release/html5/bin /home/appveyor/site/bin
   - mv /home/appveyor/site/bin /home/appveyor/site/derpy
