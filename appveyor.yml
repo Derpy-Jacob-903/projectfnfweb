@@ -74,10 +74,10 @@ build_script:
   - printf "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com\n" > $HOME/.git-credentials
   - git config --global user.email "mycatisagoodboi@gmail.com"
   - git config --global user.name "Derpy-Jacob-903"
-  - cd /home/appveyor/derpy
-  - haxelib run lime build html5
   - rm /home/appveyor/site/bin
   - mkdir /home/appveyor/site/bin
+  - cd /home/appveyor/derpy
+  - haxelib run lime build html5
   - cd /home/appveyor/site
   - cp -r /home/appveyor/derpy/export/release/html5/bin /home/appveyor/site/bin
   - mv /home/appveyor/site/bin /home/appveyor/site/derpy
@@ -90,11 +90,11 @@ build_script:
   - printf "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com\n" > $HOME/.git-credentials
   - git config --global user.email "mycatisagoodboi@gmail.com"
   - git config --global user.name "Derpy-Jacob-903"
+  - rm /home/appveyor/site/bin
+  - mkdir /home/appveyor/site/bin
   - cd /home/appveyor/chp
   - haxelib run lime build html5
   - cd /home/appveyor/site
-  - rm /home/appveyor/site/bin
-  - mkdir /home/appveyor/site/bin
   - cp -r /home/appveyor/chp/export/release/html5/bin /home/appveyor/site/bin
   - mv /home/appveyor/site/bin /home/appveyor/site/chp
   - git add --all
