@@ -1,4 +1,3 @@
-
 cd /home/appveyor/site
 git checkout main
 cd /home/appveyor
