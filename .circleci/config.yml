@@ -1,1 +1,2 @@
-language: generic
+version: 2.1
+executors: shell
