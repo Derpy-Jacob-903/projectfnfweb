@@ -74,8 +74,6 @@ build_script:
   - printf "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com\n" > $HOME/.git-credentials
   - git config --global user.email "mycatisagoodboi@gmail.com"
   - git config --global user.name "Derpy-Jacob-903"
-  - rm /home/appveyor/site/bin
-  - mkdir /home/appveyor/site/bin
   - cd /home/appveyor/derpy
   - haxelib run lime build html5
   - cd /home/appveyor/site
@@ -90,8 +88,6 @@ build_script:
   - printf "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com\n" > $HOME/.git-credentials
   - git config --global user.email "mycatisagoodboi@gmail.com"
   - git config --global user.name "Derpy-Jacob-903"
-  - rm /home/appveyor/site/bin
-  - mkdir /home/appveyor/site/bin
   - cd /home/appveyor/chp
   - haxelib run lime build html5
   - cd /home/appveyor/site
