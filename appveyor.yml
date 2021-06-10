@@ -9,7 +9,7 @@ clone_folder: /home/appveyor/site
 environment:
   HAXELIB_ROOT: /home/appveyor/haxelib
   HAXE_INSTALLDIR: /home/appveyor/haxe
-  SRC_REPO: https://github.com/MagnusStrom/VsCassandra.git
+  SRC_REPO: https://github.com/aflacc/ProjectFNF.git
   GITHUB_ACCESS_TOKEN:
     secure: AYoRbFDfZVEdfVVzZFuz5wJXJkAEOOkHtgAweikYp3tqImQUhwg2P6dCjyPxEF7o
 
@@ -58,7 +58,9 @@ build_script:
   - cd /home/appveyor/site
   - git rm -rf nightly/
   - cp -r /home/appveyor/src/export/release/html5/bin /home/appveyor/site/bin
-  - mv /home/appveyor/site/bin /home/appveyor/site/VsCassandra
+  - mv /home/appveyor/site/bin /home/appveyor/site/nightly
+  - mv /home/appveyor/site/bin /home/appveyor/site/nightly
   - git add --all
   - git commit -m "nightly build through appveyor"
   - git push
+  - cd /home/appveyor/src/source/ugh
