@@ -5,3 +5,4 @@ This site hosts HTML5 builds of [ProjectFNF](https://github.com/aflacc/ProjectFN
 
 # [Play](nightly/) | [View README](https://github.com/aflacc/ProjectFNF/blob/master/README.md)
 ## [Play VsCassandra](projectfnfweb/VsCassandra/bin/) | [View README](https://github.com/MagnusStrom/VsCassandra/blob/master/README.md)
+## [Play FNF-vs-H](projectfnfweb/FNF-vs-H/bin/) | [View README](https://github.com/Funkin-VS-H/FNF-vs-H/blob/master/README.md)
