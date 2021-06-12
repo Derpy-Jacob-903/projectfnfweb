@@ -1,10 +1,8 @@
-version: 'v0.2-{build}-web3'
+version: 'v0.2-{build}-wintest'
 branches:
   only:
   - main
 skip_tags: true
-image: Ubuntu2004
-clone_folder: /home/appveyor/site
 
 environment:
   HAXELIB_ROOT: C:\projects\haxelib
@@ -42,27 +40,22 @@ install:
   - haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
   - haxelib install linc_luajit
   - haxelib list
-  - git clone $SRC_REPO /home/appveyor/src
+  - git clone "%SRC_REPO%" C:\projects\src
 build_script:
-  - cd /home/appveyor/src/source
-  - mkdir /home/appveyor/src/source/ugh
-  - git clone https://github.com/Derpy-Jacob-903/APIStuff.git /home/appveyor/src/source/ugh
-  - cd /home/appveyor/src/source/ugh
-  - cp APIStuff.hx /home/appveyor/src/source
-  - cd /home/appveyor/site
-  - ls /home/appveyor/src/source/ugh
+  - cd C:\projects\src\source
+  - mkdir C:\projects\src\source\ugh\
+  - git clone https://github.com/Derpy-Jacob-903/APIStuff.git C:\projects\src\source\ugh\
+  - cd C:\projects\src\source\ugh\
+  - cp APIStuff.hx C:\projects\src\source\
+  - ls C:\projects\src\source\ugh\
   - git config --global credential.helper store
   - printf "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com\n" > $HOME/.git-credentials
   - git config --global user.email "mycatisagoodboi@gmail.com"
   - git config --global user.name "Derpy-Jacob-903"
-  - cd /home/appveyor/src
+  - cd C:\projects\src\
   - haxelib run lime build windows
-  - cd /home/appveyor/site
-  - git rm -rf nightly/
-  - cp -r /home/appveyor/src/export/release/html5/bin /home/appveyor/site/bin
-  - mv /home/appveyor/site/bin /home/appveyor/site/nightly
   
 artifacts:
-  - path: export/release/windows/bin
+  - path: /export/release/windows/bin
     name: projectFNF-Windows
     type: zip
