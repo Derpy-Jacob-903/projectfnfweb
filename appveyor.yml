@@ -1,4 +1,4 @@
-version: 'v0.2-{build}-win'
+version: 'v0.2-{build}-wintest'
 branches:
   only:
   - main
