@@ -3,7 +3,6 @@ branches:
   only:
   - main
 skip_tags: true
-clone_folder: /home/appveyor/site
 
 environment:
   HAXELIB_ROOT: C:\projects\haxelib
