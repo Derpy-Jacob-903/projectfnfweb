@@ -40,7 +40,7 @@ install:
   - haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
   - haxelib install linc_luajit
   - haxelib list
-  - git clone $SRC_REPO C:\projects\src
+  - git clone "%SRC_REPO%" C:\projects\src
 build_script:
   - cd C:\projects\src\source
   - mkdir C:\projects\src\source\ugh\
