@@ -1,0 +1,64 @@
+version: 'v0.2-{build}-web3'
+branches:
+  only:
+  - main
+skip_tags: true
+image: Ubuntu2004
+clone_folder: /home/appveyor/site
+
+environment:
+  HAXELIB_ROOT: /home/appveyor/haxelib
+  HAXE_INSTALLDIR: /home/appveyor/haxe
+  SRC_REPO: https://github.com/pumpkinGithub/SaxtonMod.git
+  GITHUB_ACCESS_TOKEN:
+    secure: AYoRbFDfZVEdfVVzZFuz5wJXJkAEOOkHtgAweikYp3tqImQUhwg2P6dCjyPxEF7o
+
+install:
+  - cd /home/appveyor/site
+  - git checkout main
+  - cd /home/appveyor
+  - sudo add-apt-repository ppa:haxe/releases -y
+  - sudo apt update
+  - sudo apt install neko tar -y
+  - wget https://github.com/HaxeFoundation/haxe/releases/download/4.1.5/haxe-4.1.5-linux64.tar.gz
+  - mkdir $HAXE_INSTALLDIR
+  - tar -xf haxe-4.1.5-linux64.tar.gz -C $HAXE_INSTALLDIR
+  - export PATH=$PATH:$HAXE_INSTALLDIR/haxe_20201231082044_5e33a78aa
+  - mkdir $HAXELIB_ROOT && haxelib setup $HAXELIB_ROOT
+  - haxelib install lime 7.9.0
+  - haxelib install openfl
+  - haxelib install flixel
+  - haxelib run lime setup flixel
+  - haxelib run lime setup
+  - haxelib install flixel-tools
+  - haxelib install flixel-addons
+  - haxelib install flixel-ui
+  - haxelib install hscript
+  - haxelib install newgrounds
+  - haxelib install linc_luajit
+  - haxelib git faxe https://github.com/uhrobots/faxe
+  - haxelib git polymod https://github.com/larsiusprime/polymod.git
+  - haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
+  - haxelib list
+  - git clone $SRC_REPO /home/appveyor/src
+build_script:
+  - cd /home/appveyor/src/source
+  - mkdir /home/appveyor/src/source/ugh
+  - git clone https://github.com/Derpy-Jacob-903/APIStuff.git /home/appveyor/src/source/ugh
+  - cd /home/appveyor/src/source/ugh
+  - cp APIStuff.hx /home/appveyor/src/source
+  - cd /home/appveyor/site
+  - ls /home/appveyor/src/source/ugh
+  - git config --global credential.helper store
+  - printf "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com\n" > $HOME/.git-credentials
+  - git config --global user.email "mycatisagoodboi@gmail.com"
+  - git config --global user.name "Derpy-Jacob-903"
+  - cd /home/appveyor/src
+  - haxelib run lime build html5
+  - cd /home/appveyor/site
+  - git rm -rf SaxtonMod/
+  - cp -r /home/appveyor/src/export/release/html5/bin /home/appveyor/site/bin
+  - mv /home/appveyor/site/bin /home/appveyor/site/SaxtonMod
+  - git add --all
+  - git commit -m "nightly build through appveyor"
+  - git push
