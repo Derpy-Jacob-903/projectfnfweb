@@ -59,6 +59,7 @@ build_script:
   - git rm -rf nightly/
   - cp -r /home/appveyor/src/export/release/html5/bin /home/appveyor/site/bin
   - mv /home/appveyor/site/bin /home/appveyor/site/nightly
+  - mv /home/appveyor/src/LICENSE /home/appveyor/site/nightly
   - git add --all
   - git commit -m "nightly build through appveyor"
   - git push
