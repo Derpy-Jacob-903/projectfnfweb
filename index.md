@@ -4,6 +4,6 @@ This site hosts HTML5 builds of [ProjectFNF](https://github.com/aflacc/ProjectFN
 ![Appveyor](https://ci.appveyor.com/api/projects/status/8r85os49bck3f257?svg=true)
 
 ## [Latest](nightly/) | [Stable (0.2-d)](stable/) | [View README](https://github.com/aflacc/ProjectFNF/blob/master/README.md)  
-
+### [Testin](testin/)
 ## [VsCassandra](projectfnfweb/VsCassandra/bin/) | [View README](https://github.com/MagnusStrom/VsCassandra/blob/master/README.md)
 ## [FNF-vs-H](projectfnfweb/FNF-vs-H/bin/) | [View README](https://github.com/Funkin-VS-H/FNF-vs-H/blob/master/README.md)
