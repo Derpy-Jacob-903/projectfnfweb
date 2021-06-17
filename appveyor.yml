@@ -9,7 +9,7 @@ clone_folder: /home/appveyor/site
 environment:
   HAXELIB_ROOT: /home/appveyor/haxelib
   HAXE_INSTALLDIR: /home/appveyor/haxe
-  SRC_REPO: https://github.com/aflacc/ProjectFNF.git
+  SRC_REPO: https://github.com/Derpy-Jacob-903/ProjectFNF.git
   GITHUB_ACCESS_TOKEN:
     secure: AYoRbFDfZVEdfVVzZFuz5wJXJkAEOOkHtgAweikYp3tqImQUhwg2P6dCjyPxEF7o
 
@@ -54,7 +54,7 @@ build_script:
   - git config --global user.email "mycatisagoodboi@gmail.com"
   - git config --global user.name "Derpy-Jacob-903"
   - cd /home/appveyor/src
-  - haxelib run lime build html5
+  - haxelib run lime build html5 -debug
   - cd /home/appveyor/site
   - git rm -rf testin/
   - cp -r /home/appveyor/src/export/release/html5/bin /home/appveyor/site/bin
