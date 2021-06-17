@@ -56,11 +56,11 @@ build_script:
   - cd /home/appveyor/src
   - haxelib run lime build html5
   - cd /home/appveyor/site
-  - git rm -rf nightly/
+  - git rm -rf testin/
   - cp -r /home/appveyor/src/export/release/html5/bin /home/appveyor/site/bin
-  - mv /home/appveyor/site/bin /home/appveyor/site/nightly
+  - mv /home/appveyor/site/bin /home/appveyor/site/testin
   - cd /home/appveyor/src/
-  - mv LICENSE /home/appveyor/site/nightly
+  - mv LICENSE /home/appveyor/site/testin
   - git add --all
   - git commit -m "nightly build through appveyor"
   - git push
