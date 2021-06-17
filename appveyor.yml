@@ -57,7 +57,7 @@ build_script:
   - haxelib run lime build html5 -debug
   - cd /home/appveyor/site
   - git rm -rf testin/
-  - cp -r /home/appveyor/src/export/release/html5/bin /home/appveyor/site/bin
+  - cp -r /home/appveyor/src/export/debug/html5/bin /home/appveyor/site/bin
   - mv /home/appveyor/site/bin /home/appveyor/site/testin
   - cd /home/appveyor/src/
   - mv LICENSE /home/appveyor/site/testin
