@@ -9,7 +9,7 @@ clone_folder: /home/appveyor/site
 environment:
   HAXELIB_ROOT: /home/appveyor/haxelib
   HAXE_INSTALLDIR: /home/appveyor/haxe
-  SRC_REPO: https://github.com/Derpy-Jacob-903/ProjectFNF.git
+  SRC_REPO: https://github.com/Upland-Mutton-903/ProjectFNF.git
   GITHUB_ACCESS_TOKEN:
     secure: AYoRbFDfZVEdfVVzZFuz5wJXJkAEOOkHtgAweikYp3tqImQUhwg2P6dCjyPxEF7o
 
