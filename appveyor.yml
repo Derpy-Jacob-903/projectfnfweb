@@ -61,6 +61,7 @@ build_script:
   - mv /home/appveyor/site/bin /home/appveyor/site/nightly
   - cd /home/appveyor/src/
   - mv LICENSE /home/appveyor/site/nightly
+  - cd /home/appveyor/site/nightly
   - git add --all
   - git commit -m "nightly build through appveyor"
   - git push
