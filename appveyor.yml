@@ -9,7 +9,7 @@ clone_folder: /home/appveyor/site
 environment:
   HAXELIB_ROOT: /home/appveyor/haxelib
   HAXE_INSTALLDIR: /home/appveyor/haxe
-  SRC_REPO: https://github.com/Upland-Mutton-903/ProjectFNF.git
+  SRC_REPO: https://github.com/aflacc/ProjectFNF.git
   GITHUB_ACCESS_TOKEN:
     secure: AYoRbFDfZVEdfVVzZFuz5wJXJkAEOOkHtgAweikYp3tqImQUhwg2P6dCjyPxEF7o
 
@@ -54,13 +54,13 @@ build_script:
   - git config --global user.email "mycatisagoodboi@gmail.com"
   - git config --global user.name "Derpy-Jacob-903"
   - cd /home/appveyor/src
-  - haxelib run lime build html5 -debug
+  - haxelib run lime build html5
   - cd /home/appveyor/site
-  - git rm -rf testin/
-  - cp -r /home/appveyor/src/export/debug/html5/bin /home/appveyor/site/bin
-  - mv /home/appveyor/site/bin /home/appveyor/site/testin
+  - git rm -rf nightly/
+  - cp -r /home/appveyor/src/export/release/html5/bin /home/appveyor/site/bin
+  - mv /home/appveyor/site/bin /home/appveyor/site/nightly
   - cd /home/appveyor/src/
-  - mv LICENSE /home/appveyor/site/testin
+  - mv LICENSE /home/appveyor/site/nightly
   - git add --all
   - git commit -m "nightly build through appveyor"
   - git push
