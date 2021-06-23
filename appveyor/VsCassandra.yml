@@ -60,7 +60,7 @@ build_script:
   - cp -r /home/appveyor/src/export/release/html5/bin /home/appveyor/site/bin
   - mv /home/appveyor/site/bin /home/appveyor/site/VsCassandra
   - cd /home/appveyor/src/
-  - mv LICENSE /home/appveyor/site/nightly
+  - mv LICENSE /home/appveyor/site/VsCassandra
   - git add --all
   - git commit -m "VsCassandra build through appveyor"
   - git push
