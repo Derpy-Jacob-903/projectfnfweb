@@ -1,8 +1,7 @@
 ![KadeEngineLogo](https://github.com/Derpy-Jacob-903/projectfnfweb/blob/main/pp.png?raw=true)
 
-This site hosts HTML5 builds of [ProjectFNF](https://github.com/aflacc/ProjectFNF), compiled...
-![Appveyor](https://ci.appveyor.com/api/projects/status/8r85os49bck3f257?svg=true)
-
-## [Latest([![GitHub last commit](https://img.shields.io/github/last-commit/Derpy-Jacob-903/projectfnfweb)])](nightly/) | [Stable (0.2-d)](stable/) | [View README](https://github.com/aflacc/ProjectFNF/blob/master/README.md)
-## [VsCassandra](projectfnfweb/VsCassandra/bin/) | [View README](https://github.com/MagnusStrom/VsCassandra/blob/master/README.md)
-## [FNF-vs-H](projectfnfweb/FNF-vs-H/bin/) | [View README](https://github.com/Funkin-VS-H/FNF-vs-H/blob/master/README.md)
+This site hosts HTML5 compiled builds of [ProjectFNF](https://github.com/aflacc/ProjectFNF), And some of the mods made by the community.
+## [![GitHub last commit](https://img.shields.io/github/last-commit/Derpy-Jacob-903/projectfnfweb)](https://github.com/Derpy-Jacob-903/projectfnfweb) [Nightly](nightly/) | [Stable (0.2-d)](stable/) | [View README](https://github.com/aflacc/ProjectFNF/blob/master/README.md)
+### *MODS*
+### 【[View README](https://github.com/MagnusStrom/VsCassandra/blob/master/README.md)】[VsCassandra](/VsCassandra/)
+### 【[View README](https://github.com/Funkin-VS-H/FNF-vs-H/blob/master/README.md)】[FNF-vs-H](/FNF-vs-H/)
