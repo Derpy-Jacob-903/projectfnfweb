@@ -1,11 +1,16 @@
 {
     "song": {
         "song": "Tutorial",
+        "modcharts":
+        {
+            "circle": false
+        },
         "notes": [
             {
                 "mustHitSection": true,
                 "typeOfSection": 0,
                 "lengthInSteps": 16,
+                "circle": true,
                 "sectionNotes": []
             },
             {
